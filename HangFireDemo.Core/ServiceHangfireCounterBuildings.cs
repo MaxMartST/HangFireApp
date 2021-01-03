@@ -10,7 +10,7 @@ namespace HangFireDemo.Core
         public static IServiceCollection AddHangFireTrafficController(this IServiceCollection services, HangfireCounter configuration)
         {
             services.AddSingleton(configuration);
-            services.AddSingleton<IHangfireCounter, HangfireCounter>();
+            services.AddSingleton<IHangfireCounter>(configuration);
 
             return services;
         }
